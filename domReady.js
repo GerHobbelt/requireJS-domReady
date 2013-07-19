@@ -9,7 +9,7 @@
   self: false, setInterval: false */
 
 
-define(function () {
+define('require/domReady', [], function () {
     'use strict';
 
     var isTop, testDiv, scrollIntervalId,
