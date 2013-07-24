@@ -116,6 +116,7 @@ define('require/domReady', [], function () {
      * Loader Plugin API method
      */
     domReady.load = function (name, req, onLoad, config) {
+        config = config || {};
         if (config.isBuild) {
             onLoad(null);
         } else {
