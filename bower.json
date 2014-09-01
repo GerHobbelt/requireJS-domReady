@@ -5,8 +5,7 @@
   "dependencies": {
   },
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "components"
+    "**/*",
+    "!domReady.js"
   ]
 }
