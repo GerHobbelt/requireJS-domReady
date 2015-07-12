@@ -1,5 +1,5 @@
 {
-  "name": "requirejs-domready",
+  "name": "requirejs-domReady",
   "version": "2.0.1",
   "main": "domReady.js",
   "dependencies": {
