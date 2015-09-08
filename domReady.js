@@ -1,5 +1,5 @@
 /**
- * @license RequireJS domReady 2.0.1 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.
+ * @license RequireJS domReady 2.0.2 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
  * see: http://github.com/requirejs/domReady for details
  */
@@ -86,10 +86,11 @@ define([], function () {
         //http://stackoverflow.com/questions/3665561/document-readystate-of-interactive-vs-ondomcontentloaded
         //Hmm, this is more complicated on further use, see "firing too early"
         //bug: https://github.com/requirejs/domReady/issues/1
-        //so removing the || document.readyState === "interactive" test.
+        //so removing the || document.readyState === "interactive" test for MSIE.
         //There is still a window.onload binding that should get fired if
         //DOMContentLoaded is missed.
         if (document.readyState === 'complete') {
+            (window.navigator.userAgent.indexOf('MSIE') === -1 && document.readyState === 'interactive')) {
             pageLoaded();
         }
     }
@@ -110,7 +111,7 @@ define([], function () {
         return domReady;
     }
 
-    domReady.version = '2.0.1';
+    domReady.version = '2.0.2';
 
     /**
      * Loader Plugin API method
