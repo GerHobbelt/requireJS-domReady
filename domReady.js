@@ -89,7 +89,7 @@ define([], function () {
         //so removing the || document.readyState === "interactive" test for MSIE.
         //There is still a window.onload binding that should get fired if
         //DOMContentLoaded is missed.
-        if (document.readyState === 'complete') {
+        if (document.readyState === 'complete' ||
             (window.navigator.userAgent.indexOf('MSIE') === -1 && document.readyState === 'interactive')) {
             pageLoaded();
         }
