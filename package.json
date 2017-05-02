@@ -7,5 +7,5 @@
     ],
     "main": "domReady.js",
     "github": "https://github.com/requirejs/domReady",
-    "license": "(MIT OR BSD-3-Clause)"
+    "license": "MIT"
 }
